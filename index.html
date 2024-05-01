@@ -11,21 +11,37 @@
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <title>Typing Effect</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
   </head>
   <body>
     <img
-      class="w-screen h-screen object-cover absolute"
+      class="w-screen h-screen object-cover relative"
       src="./images/plantbackground1.jpeg"
       alt="plant background image"
     />
-    <h1 class="title">My Plant Playbook</h1>
-    <div id="homepageButtons">
-    <button id="loginButton">Continue Writing</button>
-    <button id="createButton">Start Writing</button>
+    <div class="absolute flex flex-col w-full text-center top-1/2 mb-42">
+      <h1 class="mb-10 great-vibes-regular text-7xl">
+        <span id="typed"></span>
+      </h1>
+      <div class="mt-20" id="homepageButtons">
+        <button id="loginButton">Continue Writing</button>
+        <button id="createButton">Start Writing</button>
+      </div>
     </div>
-
 
     <script defer src="login.js"></script>
     <script defer src="createaccount.js"></script>
+    <script>
+      const typed = new Typed("#typed", {
+        strings: ["My Plant Playbook"],
+        typeSpeed: 80,
+      });
+    </script>
   </body>
 </html>

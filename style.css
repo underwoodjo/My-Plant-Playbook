@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   height: 100%;
@@ -7,7 +11,17 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: relative;
+  position: absolute;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Great Vibes';
+    font-style: regular;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); 
+  }
 }
 
 .great-vibes-regular {
@@ -16,8 +30,8 @@ img {
     font-style: normal;
   }
 
-.title {
-  position: absolute;
+/* .title { */
+  /* position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
@@ -25,33 +39,35 @@ img {
   font-size: 4em;
   font-family: "Great Vibes", cursive;
   /* margin: 0 auto gives scrolling effect as the typing happens  */
-  margin: 0 auto;
+  /* margin: 0 auto; */
   /* overflow: hidden ensures that the content is not revealed until the animation */
-  overflow: hidden;
+  /* overflow: hidden; */
   /* white-space: nowrap ensures that the text is not keep content on a single line */
-  white-space: nowrap;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
+  /* white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite; */ 
+/* } */
 /* the typing effect */
-@keyframes typing {
+/* @keyframes typing {
   from {
     width: 0;
   }
   to {
     width: 25%;
   }
-}
+} */
 
 /* the typewriter cursor effect */
-@keyframes blink-caret {
+/* @keyframes blink-caret {
   from, to {
     border-color: transparent;
   }
   50% {
     border-color: black;
   }
-}
-
+} */
+/* h1 {
+  font-family: Great Vibes;
+} */
 
 #loginButton {
   position: absolute;
