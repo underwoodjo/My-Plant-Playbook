@@ -10,22 +10,30 @@
 </head>
 <body>
     <img
-    class="w-full h-screen object-cover relative"
+    class="w-full h-screen object-cover object-bottom relative"
     src="./images/plantbackground1.jpeg"
     alt="plant background image"
   />
-  <div class="absolute top-48 flex flex-col items-center justify-center left-0 right-0">
+  <div class="absolute top-40 flex flex-col items-center justify-center left-0 right-0 ">
   <h1 class="text-5xl text-center text-balance">
     <span id="typed" ></span>
   </h1><br>
-  <form class="flex flex-col items-center justify-center">
+  <form class="flex flex-col items-center justify-center bg-gradient-to-b from-green-900/50 to-green-100/50 rounded-lg p-5">
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="fname"<br><br>
     <label for="lname">Last Name</label>
     <input type="text" id="lname" name="lname"<br><br>
-    <button type="submit">Submit</button>
+    <label for="uname">Username</label>
+    <input type="text" id="uname" name="uname"<br><br>
+    <label for="pword">Password</label>
+    <input type="text" id="pword" name="pword"<br><br>
+    <label for="repword">Re-Type Password</label>
+    <input type="text" id="repword" name="repword"<br><br>
+    <button class="bg-white p-2 rounded-lg" type="submit">Submit</button>
   </form>
   </div>
+  <!-- Script added here  -->
+  <!-- added a <br> to make text go to a second line -->
   <script>
     const typed = new Typed("#typed", {
       strings: [`Create an account to <br> get started`],
