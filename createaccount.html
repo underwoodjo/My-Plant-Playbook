@@ -4,8 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <title>Typing Effect</title>
 </head>
 <body>
-    
+    <img
+    class="w-full h-screen object-cover relative"
+    src="./images/plantbackground1.jpeg"
+    alt="plant background image"
+  />
+  <div class="absolute top-48 flex flex-col items-center justify-center left-0 right-0">
+  <h1 class="text-5xl text-center text-balance">
+    <span id="typed" ></span>
+  </h1><br>
+  <form class="flex flex-col items-center justify-center">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="fname"<br><br>
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lname"<br><br>
+    <button type="submit">Submit</button>
+  </form>
+  </div>
+  <script>
+    const typed = new Typed("#typed", {
+      strings: [`Create an account to <br> get started`],
+      typeSpeed: 80,
+    });
+  </script>
 </body>
 </html>
